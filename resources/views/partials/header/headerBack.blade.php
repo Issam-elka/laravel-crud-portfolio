@@ -6,10 +6,7 @@
   Tip 2: you can also add an image using data-image tag
 -->
         <div class="logo">
-            <a href="/homeBack" class="simple-text logo-mini">
-                PORTFOLIO
-            </a>
-            <a href="/homeBack" class="simple-text logo-normal">
+            <a class="simple-text logo-normal">
                 ADMIN
             </a>
         </div>
@@ -21,6 +18,12 @@
                         <p>Home</p>
                     </a>
                     
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/headerBack">
+                        <i class="material-icons">dashboard</i>
+                        <p>Header</p>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/aboutBack">
@@ -81,12 +84,6 @@
                         <p>Contact</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/headerBack">
-                        <i class="material-icons">dashboard</i>
-                        <p>Header</p>
-                    </a>
-                </li>
                 <!-- your sidebar here -->
             </ul>
         </div>
@@ -96,7 +93,10 @@
         <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
             <div class="container-fluid">
                 <div class="navbar-wrapper">
-                    <a class="navbar-brand" href="javascript:;">Dashboard</a>
+                    <a class="navbar-brand" href="/homeBack">Dashboard</a>
+                </div>
+                <div class="navbar-wrapper">
+                    <a class="navbar-brand" href="/mailBox">Mailbox</a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -108,7 +108,7 @@
                 <div class="collapse navbar-collapse justify-content-end">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="javascript:;">
+                            <a class="nav-link" href="/">
                                 <i class="material-icons">logout</i> Log out
                             </a>
                         </li>

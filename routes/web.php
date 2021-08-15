@@ -54,6 +54,11 @@ Route::get('/admin', function(){
     return view('pages.BackOffice.admin');
 });
 
+Route::get('/mailBox', function(){
+    return view('pages.BackOffice.mailBox.mailBox');
+});
+
+
 // HOME STATIC ______________________________________________________________________________________
 
 Route::get('/homeBack', function(){
@@ -112,7 +117,7 @@ Route::put('/skills/{id}/update', [SkillsController::class, 'update']);
 
 // SKILLS DYNAMIC ___________________________________________________________________________________
 Route::get('/skillsBackDyn', function(){
-    $skillsDynamics = SkillsDynamic::all();
+    $skillsDynamics = SkillsDynamic::paginate(6);
     return view('pages.BackOffice.skills.dynamic.skillsBackDyn', compact('skillsDynamics'));
 });
 Route::get('/skills/{id}/show', [SkillsDynamicController::class, 'show']);
@@ -135,7 +140,7 @@ Route::put('/portfolio/{id}/update', [PortfolioController::class, 'update']);
 
 // PORTFOLIO DYNAMIC ___________________________________________________________________________________
 Route::get('/portfolioBackDyn', function(){
-    $portfolioDynamics = PortfolioDynamic::all();
+    $portfolioDynamics = PortfolioDynamic::paginate(6);
     return view('pages.BackOffice.portfolio.dynamic.portfolioBackDyn', compact('portfolioDynamics'));
 });
 Route::get('/portfolio/{id}/show', [PortfolioDynamicController::class, 'show']);
@@ -159,7 +164,7 @@ Route::put('/services/{id}/update', [ServicesController::class, 'update']);
 
 // SERVICES DYNAMIC ___________________________________________________________________________________
 Route::get('/servicesBackDyn', function(){
-    $servicesDynamics = ServicesDynamic::all();
+    $servicesDynamics = ServicesDynamic::paginate(4);
     return view('pages.BackOffice.services.dynamic.servicesBackDyn', compact('servicesDynamics'));
 });
 Route::get('/services/{id}/show', [ServicesDynamicController::class, 'show']);

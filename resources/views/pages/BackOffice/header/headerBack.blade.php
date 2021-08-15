@@ -2,7 +2,7 @@
 @section('content')
 <div class="container text-center mb-5">
     <h4>
-        Facts Back office 
+        Header Back office 
     </h4>
 </div>
     <table class="table table-bordered table-secondary border-dark table-hover">
