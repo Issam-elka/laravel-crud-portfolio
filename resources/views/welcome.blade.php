@@ -1,0 +1,10 @@
+@extends('template.main')
+@section('content')
+    @include('pages.home.home')
+    @include('pages.about.about')
+    @include('pages.facts.facts')
+    @include('pages.skills.skills')
+    @include('pages.portfolio.portfolio')
+    @include('pages.services.services')
+    @include('pages.contact.contact')
+@endsection
